@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "Encrypted TTV",
+  "description": "Auto encrypts & decrypts Twitch chat messages based on provided key.",
+  "version": "1.0",
+  "action": {
+    "default_popup": "config/index.html",
+    "default_icon": "icon.png"
+  },
+  "permissions": ["storage"],
+  "content_scripts": [
+    {
+      "js": ["scripts/twitch.js", "scripts/crypto.min.js"],
+      "matches": ["*://*.twitch.tv/*"]
+    },
+    {
+      "js": ["scripts/crypto.min.js", "scripts/websocket.js"],
+      "matches": ["*://*.twitch.tv/*"],
+      "world": "MAIN"
+    }
+  ]
+}

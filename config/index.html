@@ -1,0 +1,48 @@
+<html>
+  <head>
+    <link
+      href="https://api.fontshare.com/v2/css?f[]=satoshi@700,500,300,400&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        font-family: "Satoshi", sans-serif;
+      }
+      body {
+        padding: 20px;
+        border-radius: 500px;
+      }
+      .input_container {
+        display: flex;
+      }
+      input,
+      button {
+        padding: 8px 16px;
+        font-size: 150%;
+      }
+      button {
+        border: none;
+        background-color: #5046e5;
+        color: white;
+        border-radius: 0 100px 100px 0;
+      }
+      input {
+        border: none;
+        background-color: #f6f6f6;
+        border-radius: 100px 0 0 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Encrypted Twitch</h1>
+    <form>
+      <label for="key">Encryption key:</label>
+      <div class="input_container">
+        <input id="key" name="key" autocomplete="off" type="text" />
+        <button>Submit</button>
+      </div>
+      <p class="feedback"></p>
+    </form>
+    <script src="config.js"></script>
+  </body>
+</html>
